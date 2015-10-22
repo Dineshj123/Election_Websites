@@ -9,15 +9,15 @@ $dbcon = @mysqli_connect($servername, $username, $password, $dbname);
 if (!$dbcon) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$user=$_SESSION['user'];
-$_SESSION['category']='boys';
-$sqli="select * from `votecollection` where `voter`='$user' and `category`='boys'";
+$name=$_SESSION['user'];
+$_SESSION['category']='girls';
+$i=1;
+$sqli="select * from `votecollection` where `voter`='$name' and `category`='girls'";
 $resi=mysqli_query($dbcon,$sqli);
 $arr=mysqli_num_rows($resi);
 if($arr){header('Location:Thankyou.php');}
 else{
-$i=1;
-$sql="select * from `candidates` where `category`='boys'";
+$sql="select * from `candidates` where `category`='girls'";
 $res=mysqli_query($dbcon,$sql);
 while($arr=mysqli_fetch_array($res))
 {

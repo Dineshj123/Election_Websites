@@ -1,8 +1,10 @@
 <?php
 session_start();
-$user=110114024;
+$user=111114098;
+$_SESSION['user']=111114098;
 echo "Welcome  ".$user; 
-
+$check=substr($_SESSION['user'],1,2);
+if($check!=10){header('Location:others.php');}
 ?>
 <html>
 <head>
