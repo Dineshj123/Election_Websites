@@ -1,0 +1,36 @@
+body{
+	background-color: lightblue;
+}
+#header{
+	text-align: center;
+	font-size: 250%;
+	font-family: Ubuntu;
+	color : White;
+	font-weight: 500;
+}
+#elect_boys{
+	text-align : center;
+	color : CornflowerBlue;
+	font-family: Ubuntu;
+	font-size: 150%;
+}
+#elect_boys:hover{
+	background-color: tomato;
+	color : white;
+}
+#registration_form{
+	
+	margin-left : 20%;
+	margin-right : 20%;
+}
+label{
+	font-size: 120%;
+	font-family: Ubuntu;
+}
+#content{
+	height: 50px;
+}
+a:link    {color:white; background-color:transparent; text-decoration:none}
+a:visited {color:white; background-color:transparent; text-decoration:none}
+a:hover   {color:white; background-color:transparent; text-decoration:none}
+a:active  {color:white; background-color:transparent; text-decoration:none}

@@ -1,4 +1,5 @@
 <?php
+/*
 session_start();
 $servername = "localhost";
 $username = "root";
@@ -62,24 +63,72 @@ else{
 	else{echo "error occurred in inserting";}
     }
 }
-}
+}*/
 ?>
 <html>
 <head>
 	<title>Registration_Form</title>
+	<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>Welcome Page</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel = "stylesheet" href = "election.css" />
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+			</head>
+
 </head>
 <body>
-	<form id="form" name="form" method="post" action="" enctype="multipart/form-data">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:&nbsp;&nbsp;&nbsp;<input type="text" id="name" name="name" placeholder="Your name" autocorrect="off" /><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your manifestation:&nbsp;&nbsp;&nbsp;<input type="text" id="rollno" name="rollno" placeholder="Your roll no" autocorrect="off" /><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your manifestation:&nbsp;&nbsp;&nbsp;<input type="text" id="content" name="content" placeholder="Your cotent" autocorrect="off" /><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProfilePicture:<input type="file" id="fileToUpload" name="fileToUpload" /><br>
-	<select id="categories" name="categories">
-	<option value="">---</option>
-	<option value="boys">boys</option>
-	<option value="girls">girls</option>
-	</select>
-	<input type="submit" id="submit" name="submit" value="submit" />
-	</form>
+	
+	<div class = "page-header" id ="header">
+		Candidate Registration
+	</div>
+
+	<div class = "row" id = "registration_form">
+		<form id="form" name="form" method="post" action="" enctype="multipart/form-data">
+
+			<div class="form-group">
+	      		<label for="name">Name</label>
+	      		<input type="text" id="name" class = "form-control" name="name" placeholder="Your name" autocorrect="off" />
+	      	</div>
+	      	
+	      	<div class = "form-group">
+	    		<label for="rollno">Your Rollno:</label>
+	    		<input type="text" id="rollno" class = "form-control" name="rollno" placeholder="Your roll no" autocorrect="off" /><br>
+	    	</div>
+
+	    	<div class = "form-group">
+	    		<label for="manifestation">Your Manifestation:</label>
+	    		<input type="text" id="content" class = "form-control" name="content" placeholder="Your cotent" autocorrect="off" />
+	    	</div>
+
+			<div class = "form-group">
+	    		<label for="profilepic">Your photo:</label>
+	    		<input type="file" class = "form-control" id="fileToUpload" name="fileToUpload" />
+	    	</div>
+
+	    	<br/>
+	    	<label for="gender">Gender:</label>
+	    	<select id="categories" name="categories">
+				<option value="">---</option>
+				<option value="boys">boys</option>
+				<option value="girls">girls</option>
+			</select>
+
+			<br/><br/>
+			
+			<input type="submit" class = "btn-info" id="submit" name="submit" value="submit" />	
+		
+		</form>
+     
+     </div>
+
+	
 </body>
 </html>

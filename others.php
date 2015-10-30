@@ -10,7 +10,7 @@ if (!$dbcon) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$display="select * from `candidates`";
+$display = "select * from `candidates`";
 $res=mysqli_query($dbcon,$display);
 while($arr=mysqli_fetch_array($res))
 {
