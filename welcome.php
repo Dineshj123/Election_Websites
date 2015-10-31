@@ -2,11 +2,13 @@
 
 session_start();
 $user=$_SESSION['user']; 
+if(!$user){header('Location:login.php');}
+else{
 $check=substr($_SESSION['user'],1,2);
 $check2=substr($_SESSION['user'],5,2);
 $check3=substr($_SESSION['user'],4,1);
 if($check!=10&&$check2!=14&&$check3==1){header('Location:others.php');}
-
+}
 
 ?>
 <html>

@@ -30,6 +30,7 @@ $dbcon = @mysqli_connect($servername, $username, $password, $dbname);
 if (!$dbcon) {
     die("Connection failed: " . mysqli_connect_error());
 }
+if(!$user){header('Location:login.php');}
 $name=$_SESSION['user'];
 $_SESSION['category']='girls';
 $i=1;

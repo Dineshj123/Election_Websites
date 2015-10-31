@@ -29,6 +29,7 @@ $dbcon = @mysqli_connect($servername, $username, $password, $dbname);
 if (!$dbcon) {
     die("Connection failed: " . mysqli_connect_error());
 }
+if(!$user){header('Location:login.php');}
 $user=$_SESSION['user'];
 $_SESSION['category']='boys';
 $sqli="select * from `votecollection` where `voter`='$user' and `category`='boys'";
