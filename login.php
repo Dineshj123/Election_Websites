@@ -1,18 +1,21 @@
 <?php
+session_start();
 	 if(isset($_POST['submit']))
 	 {
+		 
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		$server   = "{webmail.nitt.edu:143/novalidate-cert}";
+		$server   = "{webmail.nitt.edu:143/notls/novalidate-cert}";
 			$imap = @imap_open($server,$username, $password,NULL,0); 
 		    imap_errors();
 		if($imap)
 		{
-			echo '<script>alert("success");</script>';
+			$_SESSION['user']=$username;
+			header('Location:welcome.php');
 		}
 		else
 		{
-			echo '<script>alert("fail");</script>';
+			echo '<script>alert("Authentication failure. Please type your correct credentials");</script>';
 		}
 	 }
 	
@@ -47,12 +50,13 @@
 				</div>
 				<label>Password</label>
 				<div class = "form-group">
-					<input type="password" class="form-control" name="password" placeholder="password">
+					<input type="password" class="form-control" name="password" placeholder="Webmail password">
 				</div>
 				<br/>
 				<button type = "submit" class = "btn btn-info" name="submit" >submit</button>
-				
 				</form>
+				<br/><br/><br/>
+				<b>Made by</b><br/><span style="font-family:Ubuntu;"> Dinesh Jayaraman, Vijay Prasanna, Sriranganathan and Zoldyck.</span>
 		</div>
 	</body>
 	</html>

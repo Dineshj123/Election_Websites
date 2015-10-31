@@ -8,6 +8,16 @@ body{
 	color : White;
 	font-weight: 500;
 }
+#header1{
+	text-align: center;
+	font-size: 100%;
+	font-family: Ubuntu;
+	color : Tomato;
+	margin-right:20%;
+	margin-left:20%;
+	border-radius:5px;
+	font-weight: 500;
+}
 #elect_boys{
 	text-align : center;
 	color : CornflowerBlue;

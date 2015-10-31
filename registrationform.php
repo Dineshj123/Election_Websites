@@ -1,5 +1,5 @@
 <?php
-/*
+
 session_start();
 $servername = "localhost";
 $username = "root";
@@ -63,7 +63,7 @@ else{
 	else{echo "error occurred in inserting";}
     }
 }
-}*/
+}
 ?>
 <html>
 <head>
@@ -104,8 +104,8 @@ else{
 	    	</div>
 
 	    	<div class = "form-group">
-	    		<label for="manifestation">Your Manifestation:</label>
-	    		<input type="text" id="content" class = "form-control" name="content" placeholder="Your cotent" autocorrect="off" />
+	    		<label for="manifestation">Your Manifesto:</label>
+	    		<input type="text" id="content" class = "form-control" name="content" placeholder="Your content" autocorrect="off" />
 	    	</div>
 
 			<div class = "form-group">

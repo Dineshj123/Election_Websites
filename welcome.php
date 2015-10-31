@@ -1,12 +1,10 @@
 <?php
 
-/*session_start();
-$user=111114098;
-$_SESSION['user']=111114098;
-echo "Welcome  ".$user; 
+session_start();
+$user=$_SESSION['user']; 
 $check=substr($_SESSION['user'],1,2);
 if($check!=10){header('Location:others.php');}
-*/
+
 
 ?>
 <html>
@@ -28,7 +26,7 @@ if($check!=10){header('Location:others.php');}
 </head>
 <body>
 	<div class = "container-fluid">
-		<br/><br/>
+		<p align="right"><?php echo "<span style='color:tomato;font-weight:300;font-family:Ubuntu'>HOWDY, ".$user."</span>"; ?>&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-info" href='logout.php'>logout</a></p>
 		<div class = "page-header" id = "header">
 			CR Elections (ICE)
 		</div>
@@ -42,6 +40,7 @@ if($check!=10){header('Location:others.php');}
 				Vote for girl CR
 			</div>
 		</a>
+
 	</div>
 </body>
 </html>

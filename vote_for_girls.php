@@ -1,3 +1,24 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>Welcome Page</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel = "stylesheet" href = "election.css" />
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<br>
+<div id="header" class="page-header">
+Candidates
+</div>
+
 <?php
 session_start();
 $servername = "localhost";
@@ -23,8 +44,7 @@ while($arr=mysqli_fetch_array($res))
 {
 	$name=$arr['name'];
 	$rollno=$arr['rollno'];
-	echo "<br>";
-	echo "<div id='container'>";
+	echo "<div class='jumbotron' id='header1'>";
 	$temp=$arr['profilepic'];
 	echo "<div id=\"box\">";
 	echo "<img src=\"$temp\" width='100' height='100' alt='fault'>";
@@ -43,39 +63,5 @@ while($arr=mysqli_fetch_array($res))
 }
 }
 ?>
-<html>
-<head>
-	<title>Vote_for_boys</title>
-	<style>
-	#container{
-		width:1000px;
-		height:150px;
-		border:solid 1px black;
-	}
-	#box{
-		position:absolute;
-		margin:auto;
-	}
-	#contentbox{
-		position:absolute;
-		margin-left:100px;
-		margin-top:30px;
-	}
-	#voteme{
-		width:50px;
-		height:50px;
-		margin-left:200px;
-		background-color:blue;
-	}
-	#voteme{
-		width:100px;
-	}
-	</style>
-</head>
-<body>
-	<div id="container_slide">
-		<div id="box">
-		</div>
-	</div>
 </body>
 </html>
