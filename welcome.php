@@ -3,7 +3,8 @@
 session_start();
 $user=$_SESSION['user']; 
 $check=substr($_SESSION['user'],1,2);
-if($check!=10){header('Location:others.php');}
+$check2=substr($_SESSION['user'],5,2);
+if($check!=10&&$check2!=14){header('Location:others.php');}
 
 
 ?>

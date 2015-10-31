@@ -43,7 +43,7 @@ session_start();
 		</div>
 		<div class = "row" id = "registration_form">
 				<br/><br/>
-				<form id="form" name="form" method="post" action="">
+					<form id="form" name="form" method="post" action="">
 				<label>Rollno</label>
 				<div class = "form-group">
 					<input class = "form-control" type="text" name="username" placeholder="rollnumber">
@@ -53,7 +53,7 @@ session_start();
 					<input type="password" class="form-control" name="password" placeholder="Webmail password">
 				</div>
 				<br/>
-				<button type = "submit" class = "btn btn-info" name="submit" >submit</button>
+					<button type = "submit" class = "btn btn-info" name="submit" >submit</button>
 				</form>
 				<br/><br/><br/>
 				<b>Made by</b><br/><span style="font-family:Ubuntu;"> Dinesh Jayaraman, Vijay Prasanna, Sriranganathan and Zoldyck.</span>
