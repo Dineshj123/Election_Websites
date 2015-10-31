@@ -29,8 +29,8 @@ $dbcon = @mysqli_connect($servername, $username, $password, $dbname);
 if (!$dbcon) {
     die("Connection failed: " . mysqli_connect_error());
 }
-if(!$user){header('Location:login.php');}
 $user=$_SESSION['user'];
+if(!$user){header('Location:login.php');}
 $_SESSION['category']='boys';
 $sqli="select * from `votecollection` where `voter`='$user' and `category`='boys'";
 $resi=mysqli_query($dbcon,$sqli);
@@ -56,7 +56,7 @@ while($arr=mysqli_fetch_array($res))
 	echo "<form id='form' name='form' action='vote.php' method='POST'>";
 	echo "<input type='hidden' id='vals' name='vals' value='$name'>";
 	echo "<input type='hidden' id='rollvals' name='rollvals' value='$rollno'>";
-	echo "<input type='submit' name='voteme' id='voteme' value='VOTE HIM'>";
+	echo "<input type='submit' name='voteme' id='voteme' value='VOTE FOR HIM'>";
 	echo "</form>";
 	echo "</div>";
 	echo "</div>";

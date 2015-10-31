@@ -30,8 +30,9 @@ $dbcon = @mysqli_connect($servername, $username, $password, $dbname);
 if (!$dbcon) {
     die("Connection failed: " . mysqli_connect_error());
 }
-if(!$user){header('Location:login.php');}
 $name=$_SESSION['user'];
+$user=$_SESSION['user'];
+if(!$user){header('Location:login.php');}
 $_SESSION['category']='girls';
 $i=1;
 $sqli="select * from `votecollection` where `voter`='$name' and `category`='girls'";
@@ -57,7 +58,7 @@ while($arr=mysqli_fetch_array($res))
 	echo "<form id='form' name='form' action='vote.php' method='POST'>";
 	echo "<input type='hidden' id='vals' name='vals' value='$name'>";
 	echo "<input type='hidden' id='rollvals' name='rollvals' value='$rollno'>";
-	echo "<input type='submit' name='voteme' id='voteme' value='VOTE HIM'>";
+	echo "<input type='submit' name='voteme' id='voteme' value='VOTE FOR HER'>";
 	echo "</form>";
 	echo "</div>";
 	echo "</div>";
